@@ -1,0 +1,19 @@
+This is project 1 "Product Sales Insights".
+
+What I have been given:
+- Project specification which outlines:
+    A clear business question to answer. 
+    A mark breakdown for each section (SQL, R, and reporting).
+- Flexibilty on how I build the models, one per product or a combined model.
+- Guidance on feature creation, interpretation, and recommendations. 
+
+What I need to do:
+- Use SQL to prepare dataset.
+- Use R for modelling and visualisations.
+- Store and submit my work using GitHub.
+
+Tips:
+- Prioritise interpretability over complexity.
+- Can compare multiple models, like linear regression vs decsion trees.
+- Ensure recomendations are practical and product specific.
+- Keep Github organised with clear file names and folder structure. 

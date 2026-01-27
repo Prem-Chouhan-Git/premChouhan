@@ -1,0 +1,13 @@
+Overview:
+- A large retailer with 45 locations has date on sales of 11 weather-sensitive products. 
+- The question I need to answer is "How does weather impact the sales of the top three best selling products?"
+- The retailer will use my findings to to inform product purchasing.
+- Use supporting visualisations and source code to answer the question. 
+
+- My key tasks are to prepare the data, build a model or models of data which predict how weather influences product 
+sales for the top three best selling products, and use the model outputs to generate business insights.
+-The model/models should focus on interpretabilty rather than accuracy, using a simple predicitive modelling technique
+such as regression rather than a more ocmplex one.
+
+- Expected to use SQL for data preparation and R for analysis.
+

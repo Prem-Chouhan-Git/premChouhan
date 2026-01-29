@@ -1,6 +1,6 @@
 
-
--- The Top 3 products with the highest total sales (item_nbr 45, 9 and 5).
+-- Calculating the top 3 products with the highest total sales.
+-- The items_nbrs' with the top 3 total sales are 45, 5 and 9.
 SELECT item_nbr, sum(units) AS total_units_sold
 FROM train
 GROUP BY item_nbr
@@ -13,7 +13,7 @@ FROM train AS t
 JOIN key AS k
 ON t.store_nbr = k.store_nbr;
 
--- The daily sales and average temperature of each day for the most sold unit (item_nbr 45).
+-- Calculating the daily sales and average temperature of each day for the most sold unit (item_nbr 45).
 SELECT t.date, SUM(t.units) AS daily_units_sold, AVG(CAST(w.tavg AS FLOAT)) AS avg_temp
 FROM train AS t
 JOIN key AS k
@@ -26,8 +26,7 @@ GROUP BY t.date
 ORDER BY t.date;
 
 -- Designing a table to be loaded into R
--- This query will return every sale row for the items 45, 9 and 5,
--- with the weather for each sale date. 
+-- This query will return every daily sale for the items 45, 9 and 5, with it's weather.
 -- Used left join so that no sales rows are missing if weather is missing. 
 WITH sales AS (
 SELECT date, store_nbr, item_nbr, SUM(units) AS units
@@ -50,5 +49,6 @@ ON ss.store_nbr = s.store_nbr
 LEFT JOIN weather w
 ON w.station_nbr = ss.station_nbr
 AND w.date = s.date;
+
 
 
